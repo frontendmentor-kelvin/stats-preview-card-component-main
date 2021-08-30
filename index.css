@@ -1,0 +1,136 @@
+.primary {
+  color: hsl(233, 47%, 7%);
+  color: hsl(244, 38%, 16%);
+  color: hsl(277, 64%, 61%);
+}
+
+.neutral {
+  color: hsl(0, 0%, 100%);
+  color: hsla(0, 0%, 100%, 0.75);
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+html, body {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 375px) {
+  #container {
+    text-align: center;
+    width: 88%;
+    margin: 60px auto;
+  }
+  #image {
+    height: 240px;
+    background-image: url('./images/image-header-mobile.jpg');
+  }
+  #content-detail {
+    height: 100%;
+    padding: 30px;
+  }
+  #numbers {
+    text-align: center;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  .number-item-value {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #container {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+  }
+  #image {
+    flex: 1;
+    background-image: url('./images/image-header-desktop.jpg');
+  }
+  #content {
+    flex: 1;
+  }
+  #content-detail {
+    padding: 60px;
+    padding-right: 80px;
+  }
+  #numbers {
+    margin-top: 60px;
+  }
+  .number-item {
+    flex: 1;
+  }
+}
+
+#container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#image #opacity {
+  height: 100%;
+  background-color: rgb(98 9 154);
+  opacity: 0.5;
+}
+
+#content {
+  background-color: hsl(244, 38%, 16%);
+}
+
+#title h1 {
+  font-size: 29px;
+  margin: 0;
+  color: white;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#title span {
+  color: hsl(277, 64%, 61%);
+}
+
+#title p, .number-item-name {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+#title p {
+  line-height: 1.6
+}
+
+#numbers {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.number-item-name {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.number-item-value {
+  font-size: 23px;
+}
